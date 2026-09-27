@@ -1,0 +1,11 @@
+.gradle/
+.gradle-user-home/
+.kotlin/
+.toolchains/
+build/
+out/
+*.log
+.env
+*.pem
+*.key
+*.p12

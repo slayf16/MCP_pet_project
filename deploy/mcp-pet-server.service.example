@@ -1,0 +1,22 @@
+[Unit]
+Description=Rick and Morty MCP server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=mcp-pet-server
+Group=mcp-pet-server
+WorkingDirectory=/opt/mcp-pet-server/current
+EnvironmentFile=/etc/mcp-pet-server.env
+ExecStart=/opt/mcp-pet-server/current/bin/MCP_pet_project
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=full
+ReadWritePaths=/opt/mcp-pet-server
+
+[Install]
+WantedBy=multi-user.target
